@@ -6,16 +6,17 @@ import axios from "axios";
 import { token } from "./auth.js";
 import "./App.css";
 
+
 function App() {
 
   const [nasaData, setNasaData] = useState([]);
 
 
+
   useEffect(() => {
       axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${token}`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${token}&hd=true`)
       .then(response => {
-          // setNasaData = (response.data);
           console.log(response.data);
           setNasaData(response.data);
       })
@@ -24,10 +25,11 @@ function App() {
       });
   }, []);
 
+  
+
   return (
     <div className="page">
       <Header nasaData={nasaData}/>
-      {/* <button onClick={() => prompt("What date would you like to see?", "YYYY-MM-DD"); } */}
       <div className="App">
         <Photo nasaData={nasaData} />
         <Text nasaData={nasaData}/>

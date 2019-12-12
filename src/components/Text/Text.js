@@ -20,18 +20,4 @@ const Text = (props) => {
     )
 }
 
-/*
-const [changeDate, setChangeDate] = useState([]);
-
-    return (
-        <div className="buttons">
-            <button onClick={() => {
-                setDate(
-                    let newDate = prompt("What date would you like? Please use YYYY-MM-DD Format.", "YYYY-MM-DD")
-                    )}></button>
-            }
-        </div>
-    )
-*/
-
 export default Text;
