@@ -1,5 +1,5 @@
 import React from "react";
-
+import { TextBox , InfoBox, ImageTitle, ImageInfo, ImageExplanation } from "../Styles";
 
 const Text = (props) => {
 
@@ -7,15 +7,16 @@ const Text = (props) => {
 
     return (
         <div className="text">
-            <div className="info">
-                <div className="title-info">
-                    <p>{props.nasaData.title}</p>
-                    <p>{props.nasaData.date}</p>
-                </div>
+            <TextBox className="info">
+                <InfoBox className="title-info">
+                    <ImageTitle>{props.nasaData.title}</ImageTitle>
+                    <ImageInfo>{props.nasaData.copyright}</ImageInfo>
+                    <ImageInfo>{props.nasaData.date}</ImageInfo>
+                </InfoBox>
                 <div className="explanation-info">
-                    <p>{props.nasaData.explanation}</p>
+                    <ImageExplanation>{props.nasaData.explanation}</ImageExplanation>
                 </div>
-            </div>
+            </TextBox>
         </div>
     )
 }
