@@ -5,6 +5,7 @@ import Text from "./components/Text/Text";
 import axios from "axios";
 import { token } from "./auth.js";
 import "./App.css";
+import { Page } from "./components/Styles";
 
 
 
@@ -29,13 +30,14 @@ function App() {
   
 
   return (
-    <div className="page">
+    <Page className="page">
       <Header nasaData={nasaData}/>
       <div className="App">
         <Photo nasaData={nasaData} />
         <Text nasaData={nasaData}/>
       </div>
-    </div>
+    </Page>
+    
   );
 }
 

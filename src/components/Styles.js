@@ -1,5 +1,11 @@
+
 import styled from "styled-components";
 
+export const Page = styled.div`
+    background-color: #DCDCDC;
+    padding-bottom: 5%;
+    font-family: 'Comfortaa', cursive;
+`;
 
 export const Head = styled.div`
     background-color: #696969; 
@@ -10,34 +16,43 @@ export const Head = styled.div`
     align-items: center;
     height: 100px;
     margin-bottom: 2%;
+    box-shadow: 0px 5px 5px #696969;
 `;
 
-export const MainTitle = styled.h1`
+export const HeadTitle = styled.h1`
     color: #E0FFFF;
     font-size: 3rem;
+    font-family: 'Cabin Sketch', cursive;
+`;
+
+export const HeadDates = styled.div`
+    text-align: center;
 `;
 
 export const Image = styled.img`
     width: 80%;
-    margin: 0 auto;
-    border-radius: 15px;
-    border: 2px solid #696969;
+    margin: 2% auto 0;
+    border-radius: 25px;
+    border: 5px outset #696969;
+    box-shadow: 15px 20px 20px #696969;
 `;
 
 export const TextBox = styled.div`
     width: 80%;
-    margin: 3% auto
+    margin: 2% auto
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2%;
-    border-radius: 15px;
-    border: 2px solid #696969;
+    border-radius: 25px;
+    border: 5px outset #696969;
+    background-color: #f2f2f2;
+    box-shadow: 15px 20px 20px #696969;
 `;
 
 export const InfoBox = styled.div`
-    width: 175%;
-    margin-right:10%;
+    width: 200%;
+    margin-right: 8%;
 `;
 
 export const ImageTitle = styled.p`
