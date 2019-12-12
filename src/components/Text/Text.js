@@ -1,34 +1,19 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { token } from "../../auth.js";
+import React from "react";
 
-const Text = () => {
-    const [title, setTitle] = useState([]);
-    const [date, setDate] = useState([]);
-    const [explanation, setExplanation] = useState([]);
 
-    useEffect(() => {
-        axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=${token}`)
-        .then(response => {
-            setTitle(response.data.title);
-            setDate(response.data.date);
-            setExplanation(response.data.explanation)
-        })
-        .catch(error => {
-            console.log("There was an error in Text: " + error);
-        });
-    }, [date]);
+const Text = (props) => {
+
+    if (!props.nasaData) return <h3>Loading Information...</h3>
 
     return (
         <div className="text">
             <div className="info">
                 <div className="title-info">
-                    <p>{title}</p>
-                    <p>{date}</p>
+                    <p>{props.nasaData.title}</p>
+                    <p>{props.nasaData.date}</p>
                 </div>
                 <div className="explanation-info">
-                    <p>{explanation}</p>
+                    <p>{props.nasaData.explanation}</p>
                 </div>
             </div>
         </div>
