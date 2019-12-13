@@ -1,10 +1,11 @@
 import React from "react";
 import { HeadDates } from "../Styles";
 
-const TodayDate = () => {
-    const today = new Date();
-    const todayDate = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
 
+const today = new Date();
+export const todayDate = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
+
+const TodayDate = () => {
     return (
         <HeadDates className="today-date">
             Today is:<br />{todayDate}.

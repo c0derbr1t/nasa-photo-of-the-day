@@ -1,10 +1,15 @@
 
 import styled from "styled-components";
+import { Button } from "reactstrap";
 
 export const Page = styled.div`
     background-color: #DCDCDC;
     padding-bottom: 5%;
     font-family: 'Comfortaa', cursive;
+`;
+
+export const ChangeButton = styled(Button)`
+    box-shadow: 3px 8px 8px #696969;
 `;
 
 export const Head = styled.div`
@@ -16,13 +21,14 @@ export const Head = styled.div`
     align-items: center;
     height: 100px;
     margin-bottom: 2%;
-    box-shadow: 0px 5px 5px #696969;
+    box-shadow: 3px 8px 8px #696969;
 `;
 
 export const HeadTitle = styled.h1`
     color: #E0FFFF;
     font-size: 3rem;
     font-family: 'Cabin Sketch', cursive;
+    margin-left: 6%;
 `;
 
 export const HeadDates = styled.div`
